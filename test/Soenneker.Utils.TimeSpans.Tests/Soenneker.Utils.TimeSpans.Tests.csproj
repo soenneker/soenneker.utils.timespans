@@ -27,7 +27,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Soenneker.Utils.TimeSpans.csproj" />
+        <ProjectReference Include="..\..\src\Soenneker.Utils.TimeSpans\Soenneker.Utils.TimeSpans.csproj" />
     </ItemGroup>
 
     <ItemGroup>
