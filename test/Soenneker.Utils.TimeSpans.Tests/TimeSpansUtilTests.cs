@@ -1,18 +1,17 @@
-﻿using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Utils.TimeSpans.Tests;
 
-[Collection("Collection")]
-public class TimeSpansUtilTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public class TimeSpansUtilTests : HostedUnitTest
 {
 
-    public TimeSpansUtilTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public TimeSpansUtilTests(Host host) : base(host)
     {
 
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
