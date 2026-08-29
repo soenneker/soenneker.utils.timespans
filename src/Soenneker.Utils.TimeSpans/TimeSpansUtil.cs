@@ -8,14 +8,20 @@ namespace Soenneker.Utils.TimeSpans;
 /// </summary>
 public static class TimeSpansUtil
 {
-    /// <returns>Very first instant of day (smallest possible TimeSpan)</returns>
+    /// <summary>
+    /// Returns midnight, the earliest representable time within a day.
+    /// </summary>
+    /// <returns><see cref="TimeSpan.Zero"/>.</returns>
     [Pure]
     public static TimeSpan GetEarliestTimeInDay()
     {
         return new TimeSpan(1);
     }
 
-    /// <returns>Very last instant of day (Max TicksPerDay - 1)</returns>
+    /// <summary>
+    /// Returns the final tick before midnight of the following day.
+    /// </summary>
+    /// <returns>One day minus one tick.</returns>
     [Pure]
     public static TimeSpan GetLatestTimeInDay()
     {
