@@ -15,7 +15,7 @@ public static class TimeSpansUtil
     [Pure]
     public static TimeSpan GetEarliestTimeInDay()
     {
-        return new TimeSpan(1);
+        return TimeSpan.Zero;
     }
 
     /// <summary>

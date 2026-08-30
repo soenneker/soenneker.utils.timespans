@@ -1,4 +1,6 @@
 using Soenneker.Tests.HostedUnit;
+using AwesomeAssertions;
+using System;
 
 namespace Soenneker.Utils.TimeSpans.Tests;
 
@@ -12,8 +14,14 @@ public class TimeSpansUtilTests : HostedUnitTest
     }
 
     [Test]
-    public void Default()
+    public void GetEarliestTimeInDay_returns_midnight()
     {
+        TimeSpansUtil.GetEarliestTimeInDay().Should().Be(TimeSpan.Zero);
+    }
 
+    [Test]
+    public void GetLatestTimeInDay_returns_tick_before_next_midnight()
+    {
+        TimeSpansUtil.GetLatestTimeInDay().Should().Be(TimeSpan.FromDays(1) - TimeSpan.FromTicks(1));
     }
 }
